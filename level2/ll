@@ -1,0 +1,46 @@
+#include <unistd.h>
+int checkdup1(char c, char *str1,int i)
+{
+  
+    int j;
+ j = 0;
+
+        while(j < i)
+        {
+            if(c == str1[j])
+                return(1);
+            j++;
+        }
+
+    return(0);
+}
+int check_dup(char *str, char *str1)
+{
+    int i;
+    int j;
+    i = 0;
+    while(str[i])
+    {
+        j =0;
+        while(str1[j])
+        {
+            if(str[i] == str1[j] && checkdup1(str[i],str,i) == 0 && str[i]) 
+            {    write(1,&str[i],1);
+                break;
+            }
+
+            j++;
+        }
+        i++;
+    }
+}
+
+
+
+int main (int argc, char **argv)
+{
+check_dup(argv[1],argv[2]);
+}
+
+
+// "padinpton" "paqefwtdjetyiytjneytjoeyjnejeyj"
