@@ -17,3 +17,4 @@ int     *ft_rrange(int start, int end)
     }
     return (range);
 }
+https://github.com/48d31kh413k/1337-exam_rank_02-42/blob/main/Level_03/lcm/lcm.subject.en.txt
