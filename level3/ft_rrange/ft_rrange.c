@@ -1,3 +1,6 @@
+
+#include <stdlib.h>
+#include <stdio.h>
 int     *ft_rrange(int start, int end)
 {
     int *range;
@@ -5,16 +8,47 @@ int     *ft_rrange(int start, int end)
 
     if (start >= end)
         return (NULL);
-    range = (int *)malloc(sizeof(int) * (end - start));
+    range = (int *)malloc(sizeof(int) * (end - start ));
     if (!range)
         return (NULL);
     i = 0;
-    while (start < end)
+    while (end >= start )
     {
-        range[i] = start;
-        start++;
+        range[i] = end ;
+        end--;
         i++;
     }
     return (range);
 }
-https://github.com/48d31kh413k/1337-exam_rank_02-42/blob/main/Level_03/lcm/lcm.subject.en.txt
+
+
+
+// int     *ft_rrange(int start, int end);
+
+// int main(void)
+// {
+//     int start = 2;
+//     int end = 7;
+//     int *arr;
+//     int size;
+//     int i;
+
+//     arr = ft_rrange(start, end);
+//     if (!arr)
+//     {
+//         printf("Memory allocation failed or invalid range.\n");
+//         return (1);
+//     }
+
+//     size = end - start;
+//     i = 0;
+//     while (i <= size )
+//     {
+//         printf("%d ", arr[i]);
+//         i++;
+//     }
+//     printf("\n");
+
+//     free(arr);
+//     return (0);
+// }
